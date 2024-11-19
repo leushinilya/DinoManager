@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:dino_manager/custom_icons.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
+void main() => runApp(const MainWidget());
+
+class MainWidget extends StatelessWidget {
+  const MainWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: "DinoManager",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("DinoManager"),
+          title: const Text(
+            "DinoManager",
+            style: TextStyle(color: Colors.white),
+          ),
           centerTitle: true,
           backgroundColor: Colors.grey[900],
         ),
-        body: Text(
-          "Hello world!",
-          style: TextStyle(
-            fontStyle: FontStyle.italic,
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            decoration: TextDecoration.underline,
-            letterSpacing: 3.0,
-            color: Colors.black87,
-            fontFamily: "Notable"
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: const EdgeInsets.all(80),
+            child: SvgPicture.asset("assets/images/atom.svg"),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Text("Add"),
           backgroundColor: Colors.grey[900],
+          child: const Icon(
+            CustomIcons.add,
+            color: Colors.white,
+          ),
         ),
         backgroundColor: Colors.grey[100],
       ),
-    ),
-  );
+    );
+  }
 }
