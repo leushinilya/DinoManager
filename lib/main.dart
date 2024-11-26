@@ -1,6 +1,7 @@
+import 'package:dino_manager/dino_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:dino_manager/custom_icons.dart';
+import 'dino_repo.dart';
 
 void main() => runApp(const MainWidget());
 
@@ -20,15 +21,16 @@ class MainWidget extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.grey[900],
         ),
-        body: Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.all(80),
-            child: SvgPicture.asset("assets/images/atom.svg"),
-          ),
+        body: ListView.builder(
+          physics: const BouncingScrollPhysics(),
+          itemCount: items.length,
+          itemBuilder: (_, index) => DinoCard(items[index]),
+          padding: const EdgeInsets.all(16.0),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            // items.add("Dino ${items.length}");
+          },
           backgroundColor: Colors.grey[900],
           child: const Icon(
             CustomIcons.add,
