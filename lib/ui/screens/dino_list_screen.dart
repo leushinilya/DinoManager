@@ -1,10 +1,12 @@
 import 'package:dino_manager/ui/components/dino_card.dart';
+import 'package:dino_manager/ui/navigation/create_route.dart';
+import 'package:dino_manager/ui/screens/dino_edit_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/ui/resources/custom_icons.dart';
 import 'package:dino_manager/data/dino_repo.dart';
 
-class DinoList extends StatelessWidget {
-  const DinoList({
+class DinoListScreen extends StatelessWidget {
+  const DinoListScreen({
     super.key,
   });
 
@@ -13,7 +15,7 @@ class DinoList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "DinoManager",
+          "Ваши динозавры",
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
@@ -22,12 +24,21 @@ class DinoList extends StatelessWidget {
       body: ListView.builder(
         physics: const BouncingScrollPhysics(),
         itemCount: items.length,
-        itemBuilder: (_, index) => DinoCard(items[index]),
+        itemBuilder: (_, index) => DinoCard(
+          dino: items[index],
+          onPressed: (dino) => {
+            Navigator.of(context).push(
+              createRoute(DinoEditScreen(dino: dino,)),
+            )
+          },
+        ),
         padding: const EdgeInsets.all(16.0),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // items.add("Dino ${items.length}");
+          Navigator.of(context).push(
+            createRoute(const DinoEditScreen()),
+          );
         },
         backgroundColor: Colors.grey[900],
         child: const Icon(
