@@ -1,4 +1,4 @@
-import 'package:dino_manager/dino.dart';
+import 'package:dino_manager/models/dino.dart';
 import 'package:flutter/material.dart';
 
 class DinoCard extends StatelessWidget {
