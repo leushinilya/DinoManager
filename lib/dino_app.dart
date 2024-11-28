@@ -6,9 +6,12 @@ class DinoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "DinoManager",
-      home: DinoListScreen(),
+      theme: ThemeData(
+
+      ),
+      home: const DinoListScreen(),
     );
   }
 }
