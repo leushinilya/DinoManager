@@ -1,6 +1,5 @@
 import 'package:dino_manager/ui/resources/colors/color_primitives.dart';
 import 'package:dino_manager/ui/resources/colors/palette.dart';
-import 'package:flutter/material.dart';
 
 final _colorPrimitives = ColorPrimitives();
 

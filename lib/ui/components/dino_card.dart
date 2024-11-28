@@ -1,4 +1,5 @@
 import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/ui/resources/theme.dart';
 import 'package:flutter/material.dart';
 
 class DinoCard extends StatelessWidget {
@@ -9,6 +10,8 @@ class DinoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final DinoThemeExtension theme = Theme.of(context).extension<DinoThemeExtension>()!;
+
     TextStyle textStyle =
         const TextStyle(color: Colors.black, overflow: TextOverflow.ellipsis);
 
@@ -18,6 +21,7 @@ class DinoCard extends StatelessWidget {
       },
       child: Card(
         elevation: 10,
+        color: theme.palette.surfaceColors.primary,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
