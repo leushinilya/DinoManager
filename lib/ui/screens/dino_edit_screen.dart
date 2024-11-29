@@ -1,3 +1,4 @@
+import 'package:dino_manager/ui/components/dino_button.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/models/dino.dart';
 
@@ -59,9 +60,9 @@ class DinoEditScreen extends StatelessWidget {
               ),
               controller: TextEditingController(text: dino?.gender.value),
             ),
-            ElevatedButton(
+            DinoButton(
               onPressed: () {},
-              child: const Text("Сохранить изменения"),
+              text: "Сохранить изменения",
             )
           ],
         ),
