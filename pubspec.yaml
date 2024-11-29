@@ -75,9 +75,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Notable
+     - family: Roboto
        fonts:
-         - asset: assets/fonts/Notable-Regular.ttf
+         - asset: assets/fonts/Roboto-Regular.ttf
 
      - family: CustomIcons
        fonts:
