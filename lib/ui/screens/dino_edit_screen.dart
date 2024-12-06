@@ -1,6 +1,8 @@
 import 'package:dino_manager/ui/components/dino_button.dart';
+import 'package:dino_manager/ui/components/dino_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/ui/theme/theme_extension.dart';
 
 class DinoEditScreen extends StatelessWidget {
   const DinoEditScreen({this.dino, super.key});
@@ -28,11 +30,12 @@ class DinoEditScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(context.dinoTheme.dimens.spacings.spacingL),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(
+            DinoTextField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Имя",

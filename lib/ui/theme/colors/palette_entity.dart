@@ -15,11 +15,13 @@ class Palette {
 class SurfaceColors {
   final Color primary;
   final Color secondary;
+  final Color tertiary;
   final Color disabled;
 
   SurfaceColors({
     required this.primary,
     required this.secondary,
+    required this.tertiary,
     required this.disabled,
   });
 }

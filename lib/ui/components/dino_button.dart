@@ -1,4 +1,3 @@
-import 'package:dino_manager/dino_app.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -19,13 +18,15 @@ class DinoButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(theme.dimens.corners.cornerExtraLarge),
             ),
           ),
-          backgroundBuilder:
+          backgroundColor: WidgetStatePropertyAll(theme.palette.surfaceColors.tertiary)
         ),
         child: Padding(
           padding: EdgeInsets.all(theme.dimens.spacings.spacingL),
           child: Text(
             text,
-            style: theme.textStyles.body.b1,
+            style: theme.textStyles.body.b1.copyWith(
+              color: theme.palette.textColors.primary
+            ),
           ),
         ));
   }

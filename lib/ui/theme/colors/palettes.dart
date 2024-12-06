@@ -7,6 +7,7 @@ final lightColorsPalette = Palette(
   SurfaceColors(
     primary: _colorPrimitives.grey10,
     secondary: _colorPrimitives.white,
+    tertiary: _colorPrimitives.orange,
     disabled: _colorPrimitives.grey5,
   ),
   TextColors(
@@ -31,6 +32,7 @@ final darkColorsPalette = Palette(
   SurfaceColors(
     primary: _colorPrimitives.grey80,
     secondary: _colorPrimitives.grey20,
+    tertiary: _colorPrimitives.orange,
     disabled: _colorPrimitives.grey5,
   ),
   TextColors(
