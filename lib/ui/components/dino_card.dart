@@ -1,4 +1,5 @@
 import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -14,40 +15,70 @@ class DinoCard extends StatelessWidget {
     super.key,
   });
 
+  Icon _getGenderIcon(BuildContext context) {
+    var palette = context.dinoTheme.palette;
+    switch (dino.gender) {
+      case Gender.male:
+        return Icon(
+          DinoIcons.male,
+          size: 24,
+          color: palette.iconColors.success,
+        );
+      case Gender.female:
+        return Icon(
+          DinoIcons.female,
+          size: 24,
+          color: palette.iconColors.error,
+        );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = context.dinoTheme;
 
-    TextStyle textStyle =
-        const TextStyle(color: Colors.black, overflow: TextOverflow.ellipsis);
-
-    return InkWell(
-      onTap: () {
-        onPressed(dino);
-      },
-      child: Card(
-        elevation: 10,
-        color: theme.palette.surfaceColors.primary,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Container(
+      color: primary
+          ? theme.palette.surfaceColors.primary
+          : theme.palette.surfaceColors.secondary,
+      child: InkWell(
+        onTap: () {
+          onPressed(dino);
+        },
+        child: Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(theme.dimens.spacings.spacingL),
+              child: _getGenderIcon(context),
+            ),
+            Text(
+              dino.name,
+              style: theme.textStyles.heading.h3.copyWith(
+                color: theme.palette.textColors.primary,
+              ),
+            ),
+            const Spacer(),
+            Padding(
+              padding: EdgeInsets.all(theme.dimens.spacings.spacingL),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text("Имя: ${dino.name}", style: textStyle),
-                  Text("Уровень: ${dino.level.toString()}", style: textStyle),
+                  Text(
+                    dino.race,
+                    style: theme.textStyles.heading.h3.copyWith(
+                      color: theme.palette.textColors.primary,
+                    ),
+                  ),
+                  Text(
+                    "LVL: ${dino.level.toString()}",
+                    style: theme.textStyles.body.b2.copyWith(
+                      color: theme.palette.textColors.success,
+                    ),
+                  ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Существо: ${dino.race}", style: textStyle),
-                  Text("Пол: ${dino.gender.value}", style: textStyle),
-                ],
-              ),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

@@ -19,7 +19,7 @@ final TextStyles textStyles = TextStyles(
     h3: const TextStyle(
       fontFamily: roboto,
       fontSize: 16,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w700,
     ),
     h4: const TextStyle(
       fontFamily: roboto,

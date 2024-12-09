@@ -17,6 +17,13 @@ class DinoListScreen extends StatelessWidget {
         title: const Text(
           "Ваши динозавры",
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(DinoIcons.moon),
+            onPressed: () {
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
         physics: const BouncingScrollPhysics(),
@@ -32,9 +39,9 @@ class DinoListScreen extends StatelessWidget {
               ),
             )
           },
-          primary: true,
+          primary: index % 2 == 1,
         ),
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(0),
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: () {
