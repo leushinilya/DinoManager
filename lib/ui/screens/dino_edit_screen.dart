@@ -1,6 +1,6 @@
 import 'package:dino_manager/ui/components/dino_button.dart';
 import 'package:dino_manager/ui/components/dino_text_field.dart';
-import 'package:dino_manager/ui/theme/dino_icons.dart';
+import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/models/dino.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
@@ -18,7 +18,7 @@ class DinoEditScreen extends StatelessWidget {
           dino != null ? "Изменить динозавра" : "Новый динозавр",
         ),
         leading: IconButton(
-          icon: const Icon(DinoIcons.arrow_back_16),
+          icon: const Icon(DinoIcons.arrow_back),
           onPressed: () {
             Navigator.of(context).pop();
           },

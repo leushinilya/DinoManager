@@ -1,0 +1,58 @@
+{
+  "name": "DinoIcons",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "95535e598dca8b1eaaa7f79acd105086",
+      "css": "copy",
+      "code": 59392,
+      "src": "material"
+    },
+    {
+      "uid": "34b1fe24d083539fd5d40ab2e57322b4",
+      "css": "add",
+      "code": 59393,
+      "src": "material"
+    },
+    {
+      "uid": "51d26008d35b3c8b15a48f49e2b08860",
+      "css": "male",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "471497b78b90ca63aa21b13bf4c46cf4",
+      "css": "female",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "2799c57f6de779678d46786054fb2dc3",
+      "css": "arrow_back",
+      "code": 59397,
+      "src": "material"
+    },
+    {
+      "uid": "f8e120c48c070f8afd2d072651b4fb9f",
+      "css": "sun",
+      "code": 59398,
+      "src": "entypo"
+    },
+    {
+      "uid": "eabb1a194101764c584084deccf1118a",
+      "css": "moon",
+      "code": 61830,
+      "src": "fontawesome5"
+    },
+    {
+      "uid": "b6dff7cad421a8a83ab6d0da2763343f",
+      "css": "trash",
+      "code": 61944,
+      "src": "fontawesome5"
+    }
+  ]
+}

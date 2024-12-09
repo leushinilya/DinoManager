@@ -1,7 +1,7 @@
 import 'package:dino_manager/ui/components/dino_card.dart';
 import 'package:dino_manager/ui/navigation/create_route.dart';
 import 'package:dino_manager/ui/screens/dino_edit_screen.dart';
-import 'package:dino_manager/ui/theme/dino_icons.dart';
+import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/data/dino_repo.dart';
 
@@ -43,7 +43,7 @@ class DinoListScreen extends StatelessWidget {
             );
           },
           child: const Icon(
-            DinoIcons.delete_16,
+            DinoIcons.add,
             color: Colors.black,
           )),
     );
