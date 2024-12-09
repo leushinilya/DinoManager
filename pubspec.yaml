@@ -78,11 +78,9 @@ flutter:
      - family: Roboto
        fonts:
          - asset: assets/fonts/Roboto-Regular.ttf
-
-     - family: CustomIcons
+     - family: DinoIcons
        fonts:
-         - asset: assets/fonts/CustomIcons.ttf
-
+         - asset: assets/icons/DinoIcons.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

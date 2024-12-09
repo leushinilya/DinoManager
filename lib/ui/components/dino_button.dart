@@ -24,7 +24,7 @@ class DinoButton extends StatelessWidget {
           padding: EdgeInsets.all(theme.dimens.spacings.spacingL),
           child: Text(
             text,
-            style: theme.textStyles.body.b1.copyWith(
+            style: theme.textStyles.body.b2.copyWith(
               color: theme.palette.textColors.primary
             ),
           ),

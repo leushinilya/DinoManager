@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 
 class DinoCard extends StatelessWidget {
   final Dino dino;
+  final bool primary;
   final Function(Dino) onPressed;
 
-  const DinoCard({required this.dino, required this.onPressed, super.key});
+  const DinoCard({
+    required this.dino,
+    required this.primary,
+    required this.onPressed,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

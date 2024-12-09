@@ -5,7 +5,7 @@ final _colorPrimitives = ColorPrimitives();
 
 final lightColorsPalette = Palette(
   SurfaceColors(
-    primary: _colorPrimitives.grey10,
+    primary: _colorPrimitives.grey5,
     secondary: _colorPrimitives.white,
     tertiary: _colorPrimitives.orange,
     disabled: _colorPrimitives.grey5,

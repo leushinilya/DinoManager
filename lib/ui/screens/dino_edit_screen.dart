@@ -1,5 +1,6 @@
 import 'package:dino_manager/ui/components/dino_button.dart';
 import 'package:dino_manager/ui/components/dino_text_field.dart';
+import 'package:dino_manager/ui/theme/dino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:dino_manager/models/dino.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
@@ -15,15 +16,9 @@ class DinoEditScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           dino != null ? "Изменить динозавра" : "Новый динозавр",
-          style: const TextStyle(color: Colors.white),
         ),
-        centerTitle: true,
-        backgroundColor: Colors.grey[900],
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          icon: const Icon(DinoIcons.arrow_back_16),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -36,31 +31,19 @@ class DinoEditScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             DinoTextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Имя",
-              ),
-              controller: TextEditingController(text: dino?.name),
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Уровень",
-              ),
-              controller: TextEditingController(text: dino?.level.toString()),
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Существо",
-              ),
-              controller: TextEditingController(text: dino?.race),
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Пол",
-              ),
+                hint: "Имя", controller: TextEditingController(text: dino?.name)
+                // controller: TextEditingController(text: dino?.name),
+                ),
+            DinoTextField(
+                hint: "Уровень",
+                controller: TextEditingController(text: dino?.level.toString())
+                // controller: TextEditingController(text: dino?.level.toString()),
+                ),
+            DinoTextField(
+                hint: "Существо",
+                controller: TextEditingController(text: dino?.race)),
+            DinoTextField(
+              hint: "Пол",
               controller: TextEditingController(text: dino?.gender.value),
             ),
             DinoButton(
