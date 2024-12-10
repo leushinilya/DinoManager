@@ -14,19 +14,17 @@ class DinoRadioButtonGroup extends StatefulWidget {
   @override
   State<DinoRadioButtonGroup> createState() => _DinoRadioButtonGroupState();
 
-  void selectItem(String item) {
-
-  }
-
+  void selectItem(String item) {}
 }
 
 class _DinoRadioButtonGroupState extends State<DinoRadioButtonGroup> {
   String? selectedItem;
+
   @override
   Widget build(BuildContext context) {
     var theme = context.dinoTheme;
-    return ListView(
-      shrinkWrap: true,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: widget.items
           .map(
             (item) => ListTile(
