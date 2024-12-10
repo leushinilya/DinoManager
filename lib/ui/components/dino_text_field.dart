@@ -21,14 +21,27 @@ class _DinoTextFieldState extends State<DinoTextField> {
     var theme = context.dinoTheme;
     return TextField(
       decoration: InputDecoration(
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                  Radius.circular(theme.dimens.corners.cornerMedium))),
-          hintText: widget.hint,
-          hintStyle: theme.textStyles.body.b1
-              .copyWith(color: theme.palette.textColors.secondary),
-          fillColor: theme.palette.surfaceColors.secondary,
-          filled: true),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(theme.dimens.corners.cornerMedium),
+          ),
+          borderSide: BorderSide(
+            width: 1,
+            color: theme.palette.surfaceColors.tertiary,
+          ),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(theme.dimens.corners.cornerMedium),
+          ),
+          borderSide: BorderSide.none,
+        ),
+        hintText: widget.hint,
+        hintStyle: theme.textStyles.body.b1
+            .copyWith(color: theme.palette.textColors.secondary),
+        fillColor: theme.palette.surfaceColors.secondary,
+        filled: true,
+      ),
       style: theme.textStyles.body.b1
           .copyWith(color: theme.palette.textColors.primary),
       controller: widget.controller,

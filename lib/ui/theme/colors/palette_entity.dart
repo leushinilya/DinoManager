@@ -14,12 +14,14 @@ class Palette {
 
 class SurfaceColors {
   final Color primary;
+  final Color onPrimary;
   final Color secondary;
   final Color tertiary;
   final Color disabled;
 
   SurfaceColors({
     required this.primary,
+    required this.onPrimary,
     required this.secondary,
     required this.tertiary,
     required this.disabled,
@@ -51,6 +53,7 @@ class IconColors {
   final Color success;
   final Color warning;
   final Color error;
+  final Color accent;
 
   IconColors({
     required this.primary,
@@ -59,5 +62,6 @@ class IconColors {
     required this.success,
     required this.warning,
     required this.error,
+    required this.accent,
   });
 }

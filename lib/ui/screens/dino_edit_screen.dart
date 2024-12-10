@@ -12,6 +12,7 @@ class DinoEditScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = context.dinoTheme;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -31,21 +32,31 @@ class DinoEditScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             DinoTextField(
-                hint: "Имя", controller: TextEditingController(text: dino?.name)
-                // controller: TextEditingController(text: dino?.name),
-                ),
+              hint: "Имя",
+              controller: TextEditingController(text: dino?.name),
+            ),
+            SizedBox(
+              height: theme.dimens.spacings.spacingL,
+            ),
             DinoTextField(
-                hint: "Уровень",
-                controller: TextEditingController(text: dino?.level.toString())
-                // controller: TextEditingController(text: dino?.level.toString()),
-                ),
+              hint: "Уровень",
+              controller: TextEditingController(text: dino?.level.toString()),
+            ),
+            SizedBox(
+              height: theme.dimens.spacings.spacingL,
+            ),
             DinoTextField(
-                hint: "Существо",
-                controller: TextEditingController(text: dino?.race)),
+              hint: "Существо",
+              controller: TextEditingController(text: dino?.race),
+            ),
+            SizedBox(
+              height: theme.dimens.spacings.spacingL,
+            ),
             DinoTextField(
               hint: "Пол",
               controller: TextEditingController(text: dino?.gender.value),
             ),
+            const Spacer(),
             DinoButton(
               onPressed: () {},
               text: "Сохранить изменения",

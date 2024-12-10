@@ -40,7 +40,7 @@ class DinoCard extends StatelessWidget {
     return Container(
       color: primary
           ? theme.palette.surfaceColors.primary
-          : theme.palette.surfaceColors.secondary,
+          : theme.palette.surfaceColors.onPrimary,
       child: InkWell(
         onTap: () {
           onPressed(dino);

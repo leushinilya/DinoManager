@@ -6,7 +6,8 @@ final _colorPrimitives = ColorPrimitives();
 final lightColorsPalette = Palette(
   SurfaceColors(
     primary: _colorPrimitives.grey5,
-    secondary: _colorPrimitives.white,
+    onPrimary: _colorPrimitives.white,
+    secondary: _colorPrimitives.grey10,
     tertiary: _colorPrimitives.orange,
     disabled: _colorPrimitives.grey5,
   ),
@@ -25,12 +26,14 @@ final lightColorsPalette = Palette(
     success: _colorPrimitives.green,
     warning: _colorPrimitives.yellow,
     error: _colorPrimitives.red,
+    accent: _colorPrimitives.orange,
   ),
 );
 
 final darkColorsPalette = Palette(
   SurfaceColors(
     primary: _colorPrimitives.grey80,
+    onPrimary: _colorPrimitives.grey60,
     secondary: _colorPrimitives.grey20,
     tertiary: _colorPrimitives.orange,
     disabled: _colorPrimitives.grey5,
@@ -50,5 +53,6 @@ final darkColorsPalette = Palette(
     success: _colorPrimitives.green,
     warning: _colorPrimitives.yellow,
     error: _colorPrimitives.red,
+    accent: _colorPrimitives.orange,
   ),
 );

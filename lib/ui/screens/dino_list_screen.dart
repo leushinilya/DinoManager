@@ -1,4 +1,5 @@
 import 'package:dino_manager/ui/components/dino_card.dart';
+import 'package:dino_manager/ui/dialogs/switch_theme_dialog.dart';
 import 'package:dino_manager/ui/navigation/create_route.dart';
 import 'package:dino_manager/ui/screens/dino_edit_screen.dart';
 import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
@@ -21,6 +22,9 @@ class DinoListScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(DinoIcons.moon),
             onPressed: () {
+              showDialog(context: context, builder: (BuildContext context) {
+                return const SwitchThemeDialog();
+              });
             },
           ),
         ],
@@ -51,7 +55,6 @@ class DinoListScreen extends StatelessWidget {
           },
           child: const Icon(
             DinoIcons.add,
-            color: Colors.black,
           )),
     );
   }
