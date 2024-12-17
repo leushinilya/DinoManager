@@ -1,4 +1,4 @@
-import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/data/models/dino.dart';
 
 final List<Dino> items = [
   Dino("Тьюррет", "Артоплевра", Gender.male, 150),

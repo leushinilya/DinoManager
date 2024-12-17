@@ -2,7 +2,7 @@ import 'package:dino_manager/ui/components/dino_button.dart';
 import 'package:dino_manager/ui/components/dino_text_field.dart';
 import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/data/models/dino.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
 
 class DinoEditScreen extends StatelessWidget {

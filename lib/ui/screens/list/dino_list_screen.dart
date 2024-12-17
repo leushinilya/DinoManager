@@ -1,10 +1,10 @@
 import 'package:dino_manager/ui/components/dino_card.dart';
 import 'package:dino_manager/ui/dialogs/switch_theme_dialog.dart';
 import 'package:dino_manager/ui/navigation/create_route.dart';
-import 'package:dino_manager/ui/screens/dino_edit_screen.dart';
+import 'package:dino_manager/ui/screens/edit/dino_edit_screen.dart';
 import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:dino_manager/data/dino_repo.dart';
+import 'package:dino_manager/data/repo/dino_repo.dart';
 
 class DinoListScreen extends StatelessWidget {
   const DinoListScreen({

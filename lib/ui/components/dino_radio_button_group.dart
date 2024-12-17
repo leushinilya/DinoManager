@@ -9,7 +9,7 @@ class DinoRadioButtonGroup extends StatefulWidget {
   });
 
   final Set<String> items;
-  final Function(int) callback;
+  final Function(String) callback;
 
   @override
   State<DinoRadioButtonGroup> createState() => _DinoRadioButtonGroupState();
@@ -41,6 +41,7 @@ class _DinoRadioButtonGroupState extends State<DinoRadioButtonGroup> {
                 onChanged: (String? value) {
                   setState(() {
                     selectedItem = value;
+                    if (value != null) widget.callback(value);
                   });
                 },
               ),

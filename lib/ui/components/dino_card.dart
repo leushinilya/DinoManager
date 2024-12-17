@@ -1,4 +1,4 @@
-import 'package:dino_manager/models/dino.dart';
+import 'package:dino_manager/data/models/dino.dart';
 import 'package:dino_manager/ui/theme/icons/dino_icons.dart';
 import 'package:dino_manager/ui/theme/theme_extension.dart';
 import 'package:flutter/material.dart';
