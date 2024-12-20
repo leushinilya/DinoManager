@@ -12,22 +12,23 @@ class SwitchThemeDialog extends StatefulWidget {
 
 class _SwitchThemeDialogState extends State<SwitchThemeDialog> {
   ThemeMode? selectedThemeMode;
-  Map<String, ThemeMode> modesMap = {
-    "Темная": ThemeMode.dark,
-    "Светлая": ThemeMode.light,
-    "Системная": ThemeMode.system,
-  };
 
   @override
   Widget build(BuildContext context) {
-    SwitchThemeModel model = context.watch();
+    SwitchThemeModel model = context.read();
     return AlertDialog(
       title: const Text("Выберите тему"),
       content: DinoRadioButtonGroup(
-        items: modesMap.keys.toSet(),
-        callback: (modeTitle) {
-          ThemeMode? themeMode = modesMap[modeTitle];
-          selectedThemeMode = themeMode;
+        items: ThemeMode.values
+            .map((mode) => switch (mode) {
+                  ThemeMode.system => "Системная",
+                  ThemeMode.light => "Светлая",
+                  ThemeMode.dark => "Темная",
+                })
+            .toList(),
+        initialItemIndex: ThemeMode.values.toList().indexOf(model.mode),
+        callback: (index) {
+          selectedThemeMode = ThemeMode.values[index];
         },
       ),
       actions: [
